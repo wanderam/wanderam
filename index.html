@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus links</title>
+    <style>
+        /* Configurações Gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212; /* Fundo escuro */
+            color: #ffffff; /* Cor da fonte do título */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #00ff88;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            margin-bottom: 30px;
+        }
+
+        /* Container de links */
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Estilo do botão em si */
+        .link-card {
+            display: flex;  /* Para alinhar ícone e texto perfeitamente */
+            align-items: center;
+            justify-content: center;
+            background-color: #1e1e1e;
+            color: #00ff88;
+            text-decoration: none;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .link-card i {
+            margin-right: 12px !important;
+            font-size: 1.3rem;
+            display: inline-block;
+        }
+
+        /* Efeito ao passar o mouse */
+        .link-card:hover {
+            background-color: #00ff88;
+            color: #121212;
+            transform: scale(1.03);
+        }
+
+        /* Container para a nova lista de links */
+        .extra-links {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 30px;
+            text-align: left;  /* Alinhamento à esquerda para facilitar a leitura */
+        }
+
+        /* Título da seção */
+        .extra-links h2 {
+            font-size: 1.1rem;
+            color: #00ff88;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de cada item da lista */
+        .info-link {
+            display: block;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: 0.2s;
+        }
+
+        .link-title {
+            display: block;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .link-desc {
+            display: block;
+            color: #aaaaaa;
+            font-size: 0.85rem;
+            margin-top: 4px;
+        }
+
+        .info-link:hover .link-title {
+            color: #00ff88;
+            text-decoration: underline;
+        }
+
+        .info-link:hover i {
+            transform: translateX(3px);  /* Pequeno movimento de "empurrão na seta */
+            transition: 0.2s;
+            opacity: 1 !important;
+        }
+
+        .info-link:hover .link-desc {
+            color: #ffffff;
+        }
+
+
+        /* Define a animação: começa invisível e um pouco abaixo, termina visível no lugar */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Aplica a animação aos botões */
+        .link-card {
+            opacity: 0; /* Começa invisível */
+            animation: fadeInUp 0.6s ease forwards;
+}
+
+        /* O primeiro botão aparece em 0.1s, o segundo em 0.2s, e assim por diante */
+        .link-card:nth-child(1) { animation-delay: 0.1s; }
+        .link-card:nth-child(2) { animation-delay: 0.2s; }
+        .link-card:nth-child(3) { animation-delay: 0.3s; }
+        .link-card:nth-child(4) { animation-delay: 0.4s; }
+
+
+                
+    </style>
+</head>
+<body>
+
+    <img src="https://i1.rgstatic.net/ii/profile.image/967603103211520-1607705965310_Q512/Wander-Martins.jpg" alt="Foto de Perfil" class="profile-pic">
+
+    <h1>Wander A. Martins</h1>
+    <p>
+        Doutor em Agricultura Tropical e Subtropical com ampla vivência em <b>aquisição</b>, <b>organização</b>
+        e <b>análise</b> de dados geoespaciais utilizando QGIS, ArcGIS e Python.
+        Experiência comprovada em modelagem hidrológica com o modelo SWAT (<i>Soil and Water Assessment Tool</i>),
+        criação de dashboards interativos e desenvolvimento de soluções baseadas em sensoriamento remoto
+        para suporte à agricultura e gestão ambiental.
+        Histórico de publicações científicas internacionais e atuação em parcerias com prefeituras
+        e instituições públicas.
+        Busca oportunidades para aplicar conhecimento técnico e visão estratégica em empresas inovadoras
+        voltadas à agricultura digital, meio ambiente ou análise territorial.
+    </p>
+
+    <div class="container">
+        <a href="https://www.linkedin.com/in/wanderaraujomartins/" class="link-card" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+
+        <a href="https://github.com/wanderam" class="link-card" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+
+        <a href="https://wa.me/+55 19 99001-6107" class="link-card" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+
+        <a href="mailto:wander.am.ufv@gmail.com" class="link-card" target="_blank">
+            <i class="fas fa-envelope"></i> E-mail
+        </a>
+
+    </div>
+
+    <div class="extra-links">
+        <h2>Outros Produtos</h2>
+
+        <a href="https://labgeoiac.github.io/louveira/PSA_Louveira.html" class="info-link" target="_blank" rel="noopener noreferrer">
+            <span class="link-title">
+                Mapa interativo (Propriedades Louveira-SP) <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 5px; opacity: 0.6;"></i>
+            </span>
+            <span class="link-desc">
+                Acesse o mapa interativo e veja a classificação das propriedades.
+            </span>
+        </a>
+
+        <a href="https://hidroapp-ubrzbjvsapplgmsjp96xwbx.streamlit.app/" class="info-link" target="_blank" rel="noopener noreferrer">
+            <span class="link-title">
+                Hidroapp (Streamlit) <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 5px; opacity: 0.6;"></i>
+            </span>
+            <span class="link-desc">
+                Aplicativo interativo para divulgar resultados de escoamento de base e recarga de aquífero.
+            </span>
+        </a>
+
+    </div>
+    
+    
+</body>
+</html>
